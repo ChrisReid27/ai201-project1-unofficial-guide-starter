@@ -48,6 +48,7 @@ Overlap is going to be 30-40 words. (Aka 150-200 chars.)
 
 **Reasoning:**
 My sources are split into three categories: official web pages, online discussion forums, and journalistic ranking lists. For sources 1 and 2, the chunks work since they are both ranking lists so each chunk is basically each separate ranking. For the reddit sources, users don't usually make long responses maybe besides the OP that starts threads so 200-250 words should cover most dialogues. And then for web pages plus my one spreadsheet, information is the most dense so the overlap should work to make sure nothing is missed for these.
+
 ---
 
 ## Retrieval Approach
@@ -66,6 +67,7 @@ Top-k will be 3-5.
 
 **Production tradeoff reflection:**
 If there were no cost restraints I'd use a different model like the voyage-3 because it offers way more tokens and dimensions. It means I would be able to easily capture the full context of my sources and probably make them broader and it would still work.
+
 ---
 
 ## Evaluation Plan
