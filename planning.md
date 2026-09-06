@@ -122,10 +122,10 @@ If there were no cost restraints I'd use a different model like the voyage-3 bec
      with my specified chunk size and overlap" is a plan. -->
 
 **Milestone 3 — Ingestion and chunking:**
-I'll use Claude for the doc ingestion and chunking where I'll have to specify the chunk sizes of 1,000–1,200 characters (200-250 words) and the overlap of 150–200 characters (30-40 words).
+I'll use Claude/Copilot for the doc ingestion and chunking where I'll have to specify the chunk sizes of 1,000–1,200 characters (200-250 words) and the overlap of 150–200 characters (30-40 words).
 
 **Milestone 4 — Embedding and retrieval:**
-I'll use Claude also for embedding and vector storage specifying the model sentence-transformers/all-MiniLM-L6-v2, ChromaDB for the storage, and a retrieval target of Top-k = 5.
+I'll use Claude/Copilot also for embedding and vector storage specifying the model sentence-transformers/all-MiniLM-L6-v2, ChromaDB for the storage, and a retrieval target of Top-k = 5.
 
 **Milestone 5 — Generation and interface:**
 I'll use openai/gpt-oss-120b for generation and interface where I'll have to put the constraint of only having the sytem use the context chunks I provided and nothing else. No outside info can be used so if there isn't enough info the sytem should say that, but if it can answer, the system should site the source of the info.
