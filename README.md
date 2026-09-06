@@ -46,12 +46,16 @@ My domain is where on Howard's campus and the surrounding DC area students can g
      - What your final chunk count was across all documents -->
 
 **Chunk size:**
+My chunk size is evenly in between 1000 and 1,200 characters at 1,100 characters (Aka in between 200-250 words). This ensures my chunks aren't too small but also not to big, I didn't want my chunks to exactly hit the minimum or max limit.
 
 **Overlap:**
+My overlap size is 175 characters. It's in the threshold that works best for my documents (150-200 or 30-40 words.)
 
 **Why these choices fit your documents:**
+My documents are split in three main categories. These insclude journalistic rankings, online forum discussions (just Reddit basically), and official web pages (plus a collaborative spreadsheet). These documents aren't super wordy, so the chunks couldn't be too small, but because some were denser than others like the google sheets being more comprehensive versus some of the shorter reddit threads, the chunks had to be sizeable enough to fit complete thoughts.
 
 **Final chunk count:**
+The original chunk count was 39. After cleaning up the chunks and fixing some issues regarding the reddit sources not appearing in raw text (had to copy paste and manually edit) the final chunk count is 45.
 
 ---
 
@@ -63,11 +67,44 @@ My domain is where on Howard's campus and the surrounding DC area students can g
 
 | # | Source document | Chunk text |
 |---|----------------|------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 |Seven Places to Study on Howard's Campus |The Writing Center in Locke Hall
+“The Writing Center has lots of natural lighting with a huge table that allows me to spread out my work.”
+Founders Library
+“My favorite place to study on campus is Founders Library! It’s historic and sentimental to me, so it’s very easy for me to study there.”
+Stokes Health Sciences Library
+“I like HSL because it's usually quiet and scarcely populated.” |
+| 2 |Howard Business Library |Business Library
+Welcome to the Howard University School of Business Library
+Reserving a Study Space.
+Book a meeting room for a group or sign up to use for private study. Each room can be used for 2 hours.
+
+Business Library Hours
+Monday - Thursday: 8am-10pm
+Friday: 8am-5pm
+Saturday: 9am-6pm
+Sunday: 1pm-9pm
+
+Undergraduate Library Hours
+Monday - Thursday: 8:00 am - 10:00 pm
+Friday: 8:00 am- 5:00 pm
+Saturday: 9:00 am- 10:00 pm
+Sunday: 1:30 pm-10:00 pm |
+| 3 |Where is a quiet place on campus that I can take a meeting uninterrupted |Where is a quiet place on campus that I can take a meeting uninterrupted
+doesn't the library have those rooms where groups meet to study?
+maybe an area in blackburn (upstairs)?
+but it really depends on the type of meeting as well as meeting logistics
+Original Poster
+Interview:) do I need to reserve library rooms
+Yes, through the website
+miner hall can be pretty quiet |
+| 4 |Study and Remote Work Locations in DC |Tynan Coffee & Tea | Y | Moderate | Breakfast | Moderate | $
+Compass Coffee | Y | Plenty | Light Fare | Moderate | $ | | There is a hidden nook towards the front and to the right, good for meetings
+Grace Street Coffee | Y | Plenty | Light Fare | Moderate | $ | N | Feels like a French cafe
+Panera Bread | Y | Plenty | Full Meal Options | Moderate | $ | | Right outside of Dupont Circle Metro stop, very quiet downstairs many outlets there |
+| 5 |Best Cafes in DC for working or studying? |Emissary in DuPont.
+When I’ve been (weekend) it’s soooo full. Also, some tables are cramped and it was pretty loud.
+It’s usually crowded. There are no outlets except for one or maybe two in the back. The wifi sucks.
+I would still go for evening cocktails or a date, but I'd never recommend it as a good place to work or study. |
 
 ---
 
