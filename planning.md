@@ -41,11 +41,11 @@ My domain topic I chose was where on Howard's campus and the surrounding DC area
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
 **Chunk size:**
-
+I'm going to do chunk sizes of 200-250 words. (Aka 1000-1200 chars.)
 **Overlap:**
-
+Overlap is going to be 30-40 words. (Aka 150-200 chars.)
 **Reasoning:**
-
+My sources are split into three categories: official web pages, online discussion forums, and journalistic ranking lists. For sources 1 and 2, the chunks work since they are both ranking lists so each chunk is basically each separate ranking. For the reddit sources, users don't usually make long responses maybe besides the OP that starts threads so 200-250 words should cover most dialogues. And then for web pages plus my one spreadsheet, information is the most dense so the overlap should work to make sure nothing is missed for these.
 ---
 
 ## Retrieval Approach
@@ -57,11 +57,11 @@ My domain topic I chose was where on Howard's campus and the surrounding DC area
      support, accuracy on domain-specific text, latency? -->
 
 **Embedding model:**
-
+all-MiniLM-L6-v2
 **Top-k:**
-
+Top-k will be 3-5.
 **Production tradeoff reflection:**
-
+If there were no cost restraints I'd use a different model like the voyage-3 because it offers way more tokens and dimensions. It means I would be able to easily capture the full context of my sources and probably make them broader and it would still work.
 ---
 
 ## Evaluation Plan
@@ -73,11 +73,11 @@ My domain topic I chose was where on Howard's campus and the surrounding DC area
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 |What libraries would still be open around Howard's campus on weekends past 12:00 pm?  |The libraries that are open would include Founders (Saturdays and Sundays), Busineess Library (Saturdays and Sundays), Undergraduate Library (Saturdays and Sundays), and the Health Science Library (Saturdays and Sundays). |
+| 2 |I have an online assignment due soon but I'm nowhere near the Howard Campus right now, where can I go in the city to work that has wifi I can use to submit this real quick? |Bourbon Coffee, Solid State Books, Yoube Cafe, Kaldi's Social House, Capitol One Cafe, Tynan Coffee and Tea, Compass Coffee, Grace Street Coffee, Panera Bread, Rue Cafe, Tryst, Jacob Coffee House, The Den - Politics and Prose, Boundary Stone, Kramerbooks & Afterwords Cafe, Library of Congress, and Three Fifty Bakery and Cofffee Bar. |
+| 3 |What do other students say about some of the study spaces at Howard? |Students at Howard have good things to say about the study spaces like how Abraham Cleveland of the class of '23 remarks that the Locke Hall Writing Center "has lots of natural lighting with a huge table that allows me to spread out my work." |
+| 4 |Any underrated or niche spots at Howard that I should know about whenever I want to go study in peace. |Sure, their are some underrated spots like Miner Hall or any building with a empty classroom since those have wifi, outlets, and A.C. There is also  |
+| 5 |Any outside study or lounge areas on campus where I can meet people? |Yes, there is the Caribbean tree on The Yard of Howard. Since it is on The Yard, students walking by is a common site meaning you can easily run into new people or people you know.|
 
 ---
 
@@ -87,9 +87,9 @@ My domain topic I chose was where on Howard's campus and the surrounding DC area
      Consider: noisy or inconsistent documents, missing source attribution, off-topic
      retrieval, chunks that split key information across boundaries. -->
 
-1.
+1. One problem may be confusion between on campus options versus surrounding D.C. general city options. There could easily be unwanted overlaps when answering user questions since some off campus options are quite close to Howard. Or that Howard options are also included in D.C. general options since Howard exists in D.C. and that logic is followed instead.
 
-2.
+2. Another issue could be whether the answers contain relevant up to date data. Since cities change so much, especially D.C., certain spots could be gone, rennovated, have their operating hours change dynamically instead of a fixed schedule, etc. so there is potential that the system could give out of date information alongside up to date information which can be confusing to the user.
 
 ---
 
@@ -100,7 +100,7 @@ My domain topic I chose was where on Howard's campus and the surrounding DC area
      Label each stage with the tool or library you're using.
      You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
-
+![alt text](image.png)
 ---
 
 ## AI Tool Plan
