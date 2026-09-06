@@ -41,10 +41,10 @@ My domain topic I chose was where on Howard's campus and the surrounding DC area
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
 **Chunk size:**
-I'm going to do chunk sizes of 200-250 words. (Aka 1000-1200 chars.)
+I'm going to do chunk sizes of 200-250 words. (Aka 1000-1200 chars.) Chosen size: 1,100 characters, since it exists evenly between 1000 and 1200 characters.
 
 **Overlap:**
-Overlap is going to be 30-40 words. (Aka 150-200 chars.)
+Overlap is going to be 30-40 words. (Aka 150-200 chars.) Chosen overlap: 175, similarly due to it evenly existing between 150 and 200 characters.
 
 **Reasoning:**
 My sources are split into three categories: official web pages, online discussion forums, and journalistic ranking lists. For sources 1 and 2, the chunks work since they are both ranking lists so each chunk is basically each separate ranking. For the reddit sources, users don't usually make long responses maybe besides the OP that starts threads so 200-250 words should cover most dialogues. And then for web pages plus my one spreadsheet, information is the most dense so the overlap should work to make sure nothing is missed for these.

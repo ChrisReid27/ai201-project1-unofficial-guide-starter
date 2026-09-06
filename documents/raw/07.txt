@@ -1,0 +1,37 @@
+Place | wifi | Seating | Food | Noise | cost | Parking | Notes
+Swing's Coffee | Y | Limited | Light Fare | Loud | $ | |
+Bourbon Coffee | Y | Moderate | Light Fare |  | $ | |
+Solid State Books | Y | Moderate | Light Fare | Quiet | $ | | In a bookstore
+Yoube Cafe | Y | Moderate | Breakfast/Lunch | Quiet | $ | |
+The Wydown | N | Limited | Light Fare | Moderate | $$ | | Very small, but cozy
+Kaldi's Social House | Y | Plenty | Full Meal Options | Loud | $ | | Wifi can be spotty. Lounge area upstairs available in the afternoons
+Ebenezer's Coffeehouse | Y | Limited | Light Fare | Moderate | $ | | I didn't enjoy the coffee, tried it multiple times
+Busboys and Poets | Y | Plenty | Full Meal Options | Loud | $$ | | Go directly to center area with huge couches. Outlets underneath table
+La Colombe | N | Moderate | Light Fare | Quiet | $$ | | Small private nook on second level, good for meetings
+Capital One Cafe | Y | Plenty | Light Fare | Moderate | $ | N | Half off all drinks for Capital One cardholders. Chairs are uncomfortable, some cushioned seats available
+Tynan Coffee & Tea | Y | Moderate | Breakfast | Moderate | $ | |
+Compass Coffee | Y | Plenty | Light Fare | Moderate | $ | | There is a hidden nook towards the front and to the right, good for meetings
+Grace Street Coffee | Y | Plenty | Light Fare | Moderate | $ | N | Feels like a French cafe, really like this spot. They have 1.5 hour table limits, as told by server in 2024
+Panera Bread | Y | Plenty | Full Meal Options | Moderate | $ | | Right outside of Dupont Circle Metro stop, very quiet downstairs many outlets there
+Rue Cafe | Y | Plenty | Breakfast/Lunch | Moderate | $ | | Outdoor seating in the front, Huge outdoor patio
+A Baked Joint | N | Plenty | Full Meal Options | Moderate | $$ | | Has baked goods from Baked & Wired (same owner)
+Tryst | Y | Plenty | Light Fare | Moderate | $ | |
+Emissary | Y | Plenty | Full Meal Options | Moderate | $$ | N | Feels like a French cafe, really like this spot. They have 1.5 hour table limits, as told by server in 2023
+Compass Coffee | Y | Moderate | Light Fare | Loud | $ | | Lots of natural light, can get busy, roastery at this location is very loud
+Jacob Coffee House | Y | Moderate | Breakfast/Lunch | Loud | $ | | very good bagel sandwiches, friendly staff. 9 tables and outdoor seating. natural light
+Vigilante Coffee | Y | Plenty | Light Fare | Moderate | $$ | | Outlets are in the far back area, lots of natural light, in Maryland
+Potter's House | Y | Few | Full Meal Options | Quiet | $ | | CLOSED
+The Den - Politics and Prose | Y | Moderate | Full Meal Options | | $ | | Located underneath Politics and Prose
+Teaism | Y | Moderate | Full Meal Options | Quiet | $$ | |
+Yerevan Cafe | Y | Moderate | Breakfast/Lunch | Quiet | $$ | |
+National Portrait Gallery | Y | Plenty | Light Fare | Moderate | $$$ | | Must apply for LoC card (pretty simple). Cannot bring bag in unless it is transparent, so can just carry books and laptop.
+Boundary Stone | Y | Plenty | Bar Food | Moderate | v | | Awesome people, good food, only open on friday for lunch which is a shame
+Kramerbooks & Afterwords Cafe | Y | Plenty | Full Meal Options | Moderate | $ | | Works till late night
+Library of Congress | Y | Plenty | None | Quiet | $ | N | Must apply for LoC card (pretty simple). Must put bag in locker unless it is transparent, must carry books and laptop.
+Three Fifty Bakery and Coffee Bar | Y | Plenty | Light Fare | Quiet | $ | | Woman who works there is the sweetest
+Big Bear Cafe | Y | Plenty | Lunch/Dinner | Quiet | $$ | |
+Blue Bottle Coffee | Y | Plenty | Light Fare | Quiet | $$$ | | Lots of natural light
+The Wydown | N | Plenty | Light Fare | Quiet | $$ | | Connected to hotel lobby with plenty of seating
+Georgetown University Library | Y | Plenty | Light Fare | Quiet | $$$ | | Excellent customer service
+DAR Library | Y | Plenty | None | Quiet | NA | |
+Georgetown Public Library | Y | Plenty | None | Quiet | NA | Y |
