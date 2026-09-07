@@ -7,7 +7,7 @@
 ---
 ## Video Demo
 
-C:\Users\reidb\Videos\Howard Study Spots Guide LLM Video Demo.mp4
+https://drive.google.com/file/d/1AQyJyp9PsGilBTWvQcsEVkiwW2QwhuL-/view?usp=sharing
 ---
 
 ## Domain
