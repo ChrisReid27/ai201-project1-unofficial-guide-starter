@@ -14,8 +14,8 @@ from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
 from urllib.request import Request, urlopen
 
 
-CHUNK_SIZE = 1100 # Target chunk size in characters, between 1000 and 1200.
-OVERLAP = 175 # Chunk overlap in characters, between 150 and 200.
+CHUNK_SIZE = 1000 # Target chunk size in characters, between 1000 and 1200.
+OVERLAP = 200 # Chunk overlap in characters, between 150 and 200.
 USER_AGENT = "python:ai201-unofficial-guide-ingestion:v1.0 (educational project)"
 
 

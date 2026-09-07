@@ -46,16 +46,16 @@ My domain is where on Howard's campus and the surrounding DC area students can g
      - What your final chunk count was across all documents -->
 
 **Chunk size:**
-My chunk size is evenly in between 1000 and 1,200 characters at 1,100 characters (Aka in between 200-250 words). This ensures my chunks aren't too small but also not to big, I didn't want my chunks to exactly hit the minimum or max limit.
+My final chunk size is 1000. It used to be 1,000 but that led to only 45 chunks. Now I'm close to 50 at 49.
 
 **Overlap:**
-My overlap size is 175 characters. It's in the threshold that works best for my documents (150-200 or 30-40 words.)
+My overlap size is 200 characters. It was 175, but I changed it to match the change I made for chunk size.
 
 **Why these choices fit your documents:**
 My documents are split in three main categories. These insclude journalistic rankings, online forum discussions (just Reddit basically), and official web pages (plus a collaborative spreadsheet). These documents aren't super wordy, so the chunks couldn't be too small, but because some were denser than others like the google sheets being more comprehensive versus some of the shorter reddit threads, the chunks had to be sizeable enough to fit complete thoughts.
 
 **Final chunk count:**
-The original chunk count was 39. After cleaning up the chunks and fixing some issues regarding the reddit sources not appearing in raw text (had to copy paste and manually edit) the final chunk count is 45.
+The original chunk count was 39. After cleaning up the chunks and fixing some issues regarding the reddit sources not appearing in raw text (had to copy paste and manually edit) the chunk count was 45. Because I wanted to get near or over 50 I changed my chunk size and overlap values to their minimum and maximum that I allowed respectively (1000 for chunk size and 200 for overlap). The final count then came to 49 which is not at 50 but near enough to work.
 
 ---
 
@@ -68,12 +68,10 @@ The original chunk count was 39. After cleaning up the chunks and fixing some is
 ### 1. Seven Places to Study on Howard's Campus
 
 ```text
-The Writing Center in Locke Hall
-“The Writing Center has lots of natural lighting with a huge table that allows me to spread out my work.”
-Founders Library
-“My favorite place to study on campus is Founders Library! It’s historic and sentimental to me, so it’s very easy for me to study there.”
-Stokes Health Sciences Library
-“I like HSL because it's usually quiet and scarcely populated.”
+Emissary in DuPont.
+When I’ve been (weekend) it’s soooo full. Also, some tables are cramped and it was pretty loud.
+It’s usually crowded. There are no outlets except for one or maybe two in the back. The wifi sucks.
+I would still go for evening cocktails or a date, but I'd never recommend it as a good place to work or study.
 ```
 
 ### 2. Howard Business Library
@@ -82,14 +80,15 @@ Stokes Health Sciences Library
 Business Library
 Welcome to the Howard University School of Business Library
 Reserving a Study Space.
-Book a meeting room for a group or sign up to use for private study. Each room can be used for 2 hours.
+Book a meeting room for a group or sign up to use for private study. Each room can be used for 2 hours. Please see the staff at the service desk.
+Library Hours
 Business Library Hours
 Monday - Thursday: 8am-10pm
 Friday: 8am-5pm
 Saturday: 9am-6pm
 Sunday: 1pm-9pm
 Undergraduate Library Hours
-Monday - Thursday: 8:00 am - 10:00 pm
+Monday – Thursday: 8:00 am – 10:00 pm
 Friday: 8:00 am- 5:00 pm
 Saturday: 9:00 am- 10:00 pm
 Sunday: 1:30 pm-10:00 pm
@@ -99,9 +98,12 @@ Sunday: 1:30 pm-10:00 pm
 
 ```text
 Where is a quiet place on campus that I can take a meeting uninterrupted
+8mo ago
 doesn't the library have those rooms where groups meet to study?
 maybe an area in blackburn (upstairs)?
 but it really depends on the type of meeting as well as meeting logistics
+oh, the school of b may have space...
+Ok-Promise-7928
 Original Poster
 Interview:) do I need to reserve library rooms
 Yes, through the website
@@ -111,19 +113,19 @@ miner hall can be pretty quiet
 ### 4. Study and Remote Work Locations in DC
 
 ```text
-Tynan Coffee & Tea | Y | Moderate | Breakfast | Moderate | $
-Compass Coffee | Y | Plenty | Light Fare | Moderate | $ | | There is a hidden nook towards the front and to the right, good for meetings
-Grace Street Coffee | Y | Plenty | Light Fare | Moderate | $ | N | Feels like a French cafe
-Panera Bread | Y | Plenty | Full Meal Options | Moderate | $ | | Right outside of Dupont Circle Metro stop, very quiet downstairs many outlets there
+A Baked Joint | N | Plenty | Full Meal Options | Moderate | $$ | | Has baked goods from Baked & Wired (same owner)
+Tryst | Y | Plenty | Light Fare | Moderate | $ | |
+Emissary | Y | Plenty | Full Meal Options | Moderate | $$ | N | Feels like a French cafe. They have 1.5 hour table limits, as told by server in 2023
+Compass Coffee | Y | Moderate | Light Fare | Loud | $ | | Lots of natural light, can get busy, roastery at this location is very loud
+Jacob Coffee House | Y | Moderate | Breakfast/Lunch | Loud | $ | | very good bagel sandwiches, friendly staff. 9 tables and outdoor seating. natural light
 ```
 
 ### 5. Best Cafes in DC for Working or Studying
 
 ```text
-Emissary in DuPont.
-When I’ve been (weekend) it’s soooo full. Also, some tables are cramped and it was pretty loud.
-It’s usually crowded. There are no outlets except for one or maybe two in the back. The wifi sucks.
-I would still go for evening cocktails or a date, but I'd never recommend it as a good place to work or study.
+Soho tea and coffee in dupont has lots of tables, wifi and is quiet, that’s my favorite. Emissary is also good but go to the 20st Street location, the one on P is really loud. Mt pleasant library is also great. Other faves around the city are lost sock in Takoma (no wifi though), dua coffee in mcpherson square, buna in petworth, and a baked joint (loud and no wifi though).
+Dans Cafe
+If you’re looking for quaint the Open City coffee shop in the National Cathedral is great. Barely crowded and has an amazing view if you sit on the porch. Feels like you’re in Europe
 ```
 
 ---
