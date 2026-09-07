@@ -77,13 +77,11 @@ Stokes Health Sciences Library
 Welcome to the Howard University School of Business Library
 Reserving a Study Space.
 Book a meeting room for a group or sign up to use for private study. Each room can be used for 2 hours.
-
 Business Library Hours
 Monday - Thursday: 8am-10pm
 Friday: 8am-5pm
 Saturday: 9am-6pm
 Sunday: 1pm-9pm
-
 Undergraduate Library Hours
 Monday - Thursday: 8:00 am - 10:00 pm
 Friday: 8:00 am- 5:00 pm
@@ -97,10 +95,12 @@ Original Poster
 Interview:) do I need to reserve library rooms
 Yes, through the website
 miner hall can be pretty quiet |
+
 | 4 |Study and Remote Work Locations in DC |Tynan Coffee & Tea | Y | Moderate | Breakfast | Moderate | $
 Compass Coffee | Y | Plenty | Light Fare | Moderate | $ | | There is a hidden nook towards the front and to the right, good for meetings
 Grace Street Coffee | Y | Plenty | Light Fare | Moderate | $ | N | Feels like a French cafe
 Panera Bread | Y | Plenty | Full Meal Options | Moderate | $ | | Right outside of Dupont Circle Metro stop, very quiet downstairs many outlets there |
+
 | 5 |Best Cafes in DC for working or studying? |Emissary in DuPont.
 When I’ve been (weekend) it’s soooo full. Also, some tables are cramped and it was pretty loud.
 It’s usually crowded. There are no outlets except for one or maybe two in the back. The wifi sucks.
