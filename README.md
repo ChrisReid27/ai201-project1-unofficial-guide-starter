@@ -49,7 +49,7 @@ My domain is where on Howard's campus and the surrounding DC area students can g
      - What your final chunk count was across all documents -->
 
 **Chunk size:**
-My final chunk size is *1000*. It used to be 1,000 but that led to only 45 chunks. Now I'm close to 50 at 49.
+My final chunk size is *1000*. It used to be 1,100 but that less than recommended chunks.
 
 **Overlap:**
 My overlap size is *200* characters. It was 175, but I changed it to match the change I made for chunk size.
