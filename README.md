@@ -151,35 +151,72 @@ If you’re looking for quaint the Open City coffee shop in the National Cathedr
      Results must be text — not screenshots. -->
 
 **Query 1:**
-
+What libraries would still be open around Howard's campus on weekends past 12:00 pm?
 Top returned chunks:
--
--
--
+- "Business Library Welcome to the Howard University School of Business Library Reserving a Study Space. Book a meeting room for a group or sign up to use for private study. Each room can be used for 2 hours. Please see the staff at the service desk. Library Hours Business Library Hours Monday - Thursday: 8am-10pm Friday: 8am-5pm Saturday: 9am-6pm Sun..."
+Distance: 0.518931
+Source: Howard Business Library
+URL: https://businesslibrary.howard.edu/
+Chunk ID: 0
+- Top result: "Welcome to Founders Library Founders Library and the Wayne A.I. Frederick Undergraduate Library (UGL) Hours of Operation Monday – Thursday: 8:00 am – 10:00 pm Friday: 8:00 am – 5:00 pm Saturday: 9:00 am – 6:00 pm Sunday: 1:30 pm – 10:00 pm Library Resources Using the Library Howard University Libraries offer students, faculty, and staff access to a..."
+Distance: 0.747356
+Source: Howard Founders Library
+URL: https://founders.howard.edu/
+Chunk ID: 0
+- Top result: "needing to focus completely on a project, and everywhere you turn, there is a social gathering on campus. The one place where you can escape the madness is located in the center of the Yard: Founders Library. This Howard landmark’s vast quiet spaces will keep you focused and diligent. Founders is the place to “lock-in.” Hours of operation: Monday t..."
+Distance: 0.762434
+Source: Best Places To Study On Campus
+URL: https://thehilltoponline.com/2023/08/21/best-places-to-study-on-campus/
+Chunk ID: 1
 
 Relevance explanation:
+These chunks are relevant since they give operating hours, letting the users easily know when certain places would still be open post midday. All places listed are correctly listed as libraries that do exist on Howard's campus.
 
 ---
 
 **Query 2:**
-
+I have an online assignment due soon but I'm nowhere near the Howard Campus right now, where can I go in the city to work that has wifi I can use to submit this real quick?
 Top returned chunks:
--
--
--
+- Top result: "from another library in the WRLC consortium? Yes, you have study privileges and can check out materials from other WRLC consortium libraries that Howard University is affiliated with (see WRLC link). Some restrictions may apply, so we recommend you check with the library before you visit. You can also request that the book be delivered to the Healt..."
+Distance: 1.031300
+Source: Louis Stokes Health Science Library About Page
+URL: https://hsl.howard.edu/library/about
+Chunk ID: 13
+- Top result: "Blue Bottle Coffee | wifi: Y | Seating: Plenty | Food: Light Fare | Noise: Quiet | cost: $$$ | Notes: Lots of natural light Source: Study and Remote Work Locations in DC | Place: The Wydown | wifi: N | Seating: Plenty | Food: Light Fare | Noise: Quiet | cost: $$ | Notes: Connected to hotel lobby with plenty of seating Source: Study and Remote Work ..."
+Distance: 1.081531
+Source: Study and Remote Work Locations in DC
+URL: https://docs.google.com/spreadsheets/d/1SzIld1R8k2QeIKut5YacZTwVTanlP2O3ZxWdvn-XFv0/edit?gid=1240342982#gid=1240342982
+Chunk ID: 8
+- Top result: "in DC | Place: Kaldi's Social House | wifi: Y | Seating: Plenty | Food: Full Meal Options | Noise: Loud | cost: $ | Notes: Wifi can be spotty. Lounge area upstairs available in the afternoons Source: Study and Remote Work Locations in DC | Place: Ebenezer's Coffeehouse | wifi: Y | Seating: Limited | Food: Light Fare | Noise: Moderate | cost: $ | No..."
+Distance: 1.084333
+Source: Study and Remote Work Locations in DC
+URL: https://docs.google.com/spreadsheets/d/1SzIld1R8k2QeIKut5YacZTwVTanlP2O3ZxWdvn-XFv0/edit?gid=1240342982#gid=1240342982
+Chunk ID: 1
 
-Relevance explanation:
+Relevance explanation: The top choice is relevant since it talks about the other libraries that Howard library facilites are connected to, that do not exist on campus but at other institutions. The user is not on Howard's campus so this can be helpful since you can study at any of the other D.C. collegiate libraries as long as they are in the WLRC group. The other two chunks are also relevant since they denote specific conditions of certain spots around D.C., not Howard specific, suited for what the user is looking for.
 
 ---
 
 **Query 3:**
-
+What do other students say about some of the study spaces at Howard?
 Top returned chunks:
--
--
--
+- Top result: "Seven Places to Study on Howard's Campus N'dia Webb (student contributor) Aug 12, 2022 2 minutes As the school year approaches, the time comes once again for students to choose where to study. But where does a student, especially a freshman, start to find that special place? We asked several students about their favorite place to crack open the boo..."
+Distance: 0.597425
+Source: Seven Places to Study on Howard's Campus
+URL: https://thedig.howard.edu/all-stories/seven-places-study-howards-campus
+Chunk ID: 0
+- Top result: "Also known as “Stokes” Over his 30-year career, Rep. Louis Stokes increased funding to expand access to biomedical research for people of color. If you like places where you can whisper to your study buddy without feeling the shame of opening a bag of chips, you will love Louis Stokes Library. Down the street from Annex, sits this campus library wi..."
+Distance: 0.768691
+Source: Best Places To Study On Campus
+URL: https://thehilltoponline.com/2023/08/21/best-places-to-study-on-campus/
+Chunk ID: 3
+- Top result: "ports facilitate easy laptop computer use and data retrieval. There are 21 group- and single-study rooms in total: 11 small study rooms each have a table and 4 chairs; 8 Problem Based Learning rooms are furnished with a table, and seats 10. There are also two single-study rooms for students studying for their board exams. A whiteboard is mounted in..."
+Distance: 0.841330
+Source: Louis Stokes Health Science Library About Page
+URL: https://hsl.howard.edu/library/about
+Chunk ID: 4
 
-Relevance explanation:
+Relevance explanation: The user asks what students say about some of the spots so the system brings up chunks from the journalistic sources that I have. They also all talk about different spots and how they might fit your needs which is what the user was trying to gauge.
 
 ---
 
