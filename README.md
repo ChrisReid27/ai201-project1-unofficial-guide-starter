@@ -55,7 +55,7 @@ My overlap size is 200 characters. It was 175, but I changed it to match the cha
 My documents are split in three main categories. These insclude journalistic rankings, online forum discussions (just Reddit basically), and official web pages (plus a collaborative spreadsheet). These documents aren't super wordy, so the chunks couldn't be too small, but because some were denser than others like the google sheets being more comprehensive versus some of the shorter reddit threads, the chunks had to be sizeable enough to fit complete thoughts.
 
 **Final chunk count:**
-The original chunk count was 39. After cleaning up the chunks and fixing some issues regarding the reddit sources not appearing in raw text (had to copy paste and manually edit) the chunk count was 45. Because I wanted to get near or over 50 I changed my chunk size and overlap values to their minimum and maximum that I allowed respectively (1000 for chunk size and 200 for overlap). The final count then came to 49 which is not at 50 but near enough to work.
+The original chunk count was 39. After cleaning up the chunks and fixing some issues regarding the reddit sources not appearing in raw text (had to copy paste and manually edit) the chunk count was 45. Because I wanted to get near or over 50 I changed my chunk size and overlap values to their minimum and maximum that I allowed respectively (1000 for chunk size and 200 for overlap) which made it 49 overall. The final amount is 53 chunks after reorganizing the chunks that have data from my spreadsheet source to be formatted better for context to be handled easier by the system.
 
 ---
 

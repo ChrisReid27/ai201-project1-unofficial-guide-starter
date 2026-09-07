@@ -187,6 +187,33 @@ def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = OVERLAP) 
     return chunks
 
 
+def enrich_spreadsheet_text(source: Source, text: str) -> str:
+    """Add column labels to each manually curated spreadsheet row."""
+    if source.source_id != 7:
+        return text
+
+    rows = [line.split("|") for line in text.splitlines() if line.strip()]
+    if not rows:
+        return text
+
+    headers = [cell.strip() for cell in rows[0]]
+    labeled_rows: list[str] = []
+    for row in rows[1:]:
+        values = [cell.strip() for cell in row]
+        fields = [
+            f"{header}: {value}"
+            for header, value in zip(headers, values)
+            if value
+        ]
+        if fields:
+            labeled_rows.append(
+                f"Source: {source.title} | "
+                + " | ".join(fields)
+            )
+
+    return "\n".join(labeled_rows)
+
+
 def run(output_dir: Path, chunk_size: int = CHUNK_SIZE, overlap: int = OVERLAP) -> int:
     raw_dir = output_dir / "raw"
     raw_dir.mkdir(parents=True, exist_ok=True)
@@ -196,6 +223,7 @@ def run(output_dir: Path, chunk_size: int = CHUNK_SIZE, overlap: int = OVERLAP) 
         for source in SOURCES:
             print(f"Loading {source.source_id}: {source.title}")
             text = load_source_text(source, raw_dir)
+            text = enrich_spreadsheet_text(source, text)
             for index, chunk in enumerate(chunk_text(text, chunk_size, overlap)):
                 record = {"source_id": source.source_id, "title": source.title, "url": source.url, "chunk_id": index, "text": chunk}
                 chunks_file.write(json.dumps(record, ensure_ascii=True) + "\n")
