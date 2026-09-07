@@ -139,8 +139,10 @@ If you’re looking for quaint the Open City coffee shop in the National Cathedr
      latency, and local vs. API-hosted. -->
 
 **Model used:**
+all-MiniLM-L6-v2
 
 **Production tradeoff reflection:**
+If I was deploying this for real users and cost was a non issue I would have to weigh the tradeoff of context length and domain specific text. If I was to use voyage-3 or voyage 3 large, that model can tke in way more broad swaths of data from sources, so then I'd have to be more manual when thinking about context and having to narrow down data to relevant info for my domain instead of for example an entire reddit forum page rather than a thread.
 
 ---
 
