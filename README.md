@@ -65,15 +65,21 @@ The original chunk count was 39. After cleaning up the chunks and fixing some is
      For each chunk, note which source document it came from.
      These must be actual text — not screenshots. -->
 
-| # | Source document | Chunk text |
-|---|----------------|------------|
-| 1 |Seven Places to Study on Howard's Campus |The Writing Center in Locke Hall
+### 1. Seven Places to Study on Howard's Campus
+
+```text
+The Writing Center in Locke Hall
 “The Writing Center has lots of natural lighting with a huge table that allows me to spread out my work.”
 Founders Library
 “My favorite place to study on campus is Founders Library! It’s historic and sentimental to me, so it’s very easy for me to study there.”
 Stokes Health Sciences Library
-“I like HSL because it's usually quiet and scarcely populated.” |
-| 2 |Howard Business Library |Business Library
+“I like HSL because it's usually quiet and scarcely populated.”
+```
+
+### 2. Howard Business Library
+
+```text
+Business Library
 Welcome to the Howard University School of Business Library
 Reserving a Study Space.
 Book a meeting room for a group or sign up to use for private study. Each room can be used for 2 hours.
@@ -86,23 +92,39 @@ Undergraduate Library Hours
 Monday - Thursday: 8:00 am - 10:00 pm
 Friday: 8:00 am- 5:00 pm
 Saturday: 9:00 am- 10:00 pm
-Sunday: 1:30 pm-10:00 pm |
-| 3 |Where is a quiet place on campus that I can take a meeting uninterrupted |Where is a quiet place on campus that I can take a meeting uninterrupted
+Sunday: 1:30 pm-10:00 pm
+```
+
+### 3. Howard University Quiet Meeting Places
+
+```text
+Where is a quiet place on campus that I can take a meeting uninterrupted
 doesn't the library have those rooms where groups meet to study?
 maybe an area in blackburn (upstairs)?
 but it really depends on the type of meeting as well as meeting logistics
 Original Poster
 Interview:) do I need to reserve library rooms
 Yes, through the website
-miner hall can be pretty quiet |
-| 4 |Study and Remote Work Locations in DC |Tynan Coffee & Tea | Y | Moderate | Breakfast | Moderate | $
+miner hall can be pretty quiet
+```
+
+### 4. Study and Remote Work Locations in DC
+
+```text
+Tynan Coffee & Tea | Y | Moderate | Breakfast | Moderate | $
 Compass Coffee | Y | Plenty | Light Fare | Moderate | $ | | There is a hidden nook towards the front and to the right, good for meetings
 Grace Street Coffee | Y | Plenty | Light Fare | Moderate | $ | N | Feels like a French cafe
-Panera Bread | Y | Plenty | Full Meal Options | Moderate | $ | | Right outside of Dupont Circle Metro stop, very quiet downstairs many outlets there |
-| 5 |Best Cafes in DC for working or studying? |Emissary in DuPont.
+Panera Bread | Y | Plenty | Full Meal Options | Moderate | $ | | Right outside of Dupont Circle Metro stop, very quiet downstairs many outlets there
+```
+
+### 5. Best Cafes in DC for Working or Studying
+
+```text
+Emissary in DuPont.
 When I’ve been (weekend) it’s soooo full. Also, some tables are cramped and it was pretty loud.
 It’s usually crowded. There are no outlets except for one or maybe two in the back. The wifi sucks.
-I would still go for evening cocktails or a date, but I'd never recommend it as a good place to work or study. |
+I would still go for evening cocktails or a date, but I'd never recommend it as a good place to work or study.
+```
 
 ---
 
