@@ -46,16 +46,16 @@ My domain is where on Howard's campus and the surrounding DC area students can g
      - What your final chunk count was across all documents -->
 
 **Chunk size:**
-My final chunk size is 1000. It used to be 1,000 but that led to only 45 chunks. Now I'm close to 50 at 49.
+My final chunk size is *1000*. It used to be 1,000 but that led to only 45 chunks. Now I'm close to 50 at 49.
 
 **Overlap:**
-My overlap size is 200 characters. It was 175, but I changed it to match the change I made for chunk size.
+My overlap size is *200* characters. It was 175, but I changed it to match the change I made for chunk size.
 
 **Why these choices fit your documents:**
 My documents are split in three main categories. These insclude journalistic rankings, online forum discussions (just Reddit basically), and official web pages (plus a collaborative spreadsheet). These documents aren't super wordy, so the chunks couldn't be too small, but because some were denser than others like the google sheets being more comprehensive versus some of the shorter reddit threads, the chunks had to be sizeable enough to fit complete thoughts.
 
 **Final chunk count:**
-The original chunk count was 39. After cleaning up the chunks and fixing some issues regarding the reddit sources not appearing in raw text (had to copy paste and manually edit) the chunk count was 45. Because I wanted to get near or over 50 I changed my chunk size and overlap values to their minimum and maximum that I allowed respectively (1000 for chunk size and 200 for overlap) which made it 49 overall. The final amount is 53 chunks after reorganizing the chunks that have data from my spreadsheet source to be formatted better for context to be handled easier by the system.
+The original chunk count was 39. After cleaning up the chunks and fixing some issues regarding the reddit sources not appearing in raw text (had to copy paste and manually edit) the chunk count was 45. Because I wanted to get near or over 50 I changed my chunk size and overlap values to their minimum and maximum that I allowed respectively (1000 for chunk size and 200 for overlap) which made it 49 overall. The final amount is *53* chunks after reorganizing the chunks that have data from my spreadsheet source to be formatted better for context to be handled easier by the system.
 
 ---
 
@@ -233,7 +233,11 @@ Relevance explanation: The user asks what students say about some of the spots s
 
 **System prompt grounding instruction:**
 
+My system tells `openai/gpt-oss-120b` to use only the retrieved documents, not general knowledge or information from the linked URLs. It must output "Sorry, I don't have enough information on that." when the retrieved context is insufficient. Each retrieved chunk is labeled with a context number, title, URL, and chunk ID, and the model is instructed to cite those context numbers inline.
+
 **How source attribution is surfaced in the response:**
+
+The app appends a deterministic `Sources` section containing the exact titles and URLs for the retrieved chunks. Context citation numbers stay aligned with that list, they still stay aligned when multiple chunks come from one document.
 
 ---
 
@@ -245,29 +249,64 @@ Relevance explanation: The user asks what students say about some of the spots s
 
 **Grounded response 1**
 
-Query:
+Query: 
+Where can I study in DC with Wi-Fi?"
 
 Response:
+You can study at any of the following DC locations that offer Wi‑Fi:
+
+- Blue Bottle Coffee — Wi‑Fi Y, plenty of seating, natural light [2][3]  
+- Georgetown University Library — Wi‑Fi Y, plenty of seating [2]  
+- DAR Library — Wi‑Fi Y, plenty of seating [2]  
+- Georgetown Public Library — Wi‑Fi Y, plenty of seating [2]  
+- Library of Congress — Wi‑Fi Y, plenty of seating [3]  
+- Three Fifty Bakery and Coffee Bar — Wi‑Fi Y, plenty of seating [3]  
+- Big Bear Cafe — Wi‑Fi Y, plenty of seating [3]  
+- Swing’s Coffee — Wi‑Fi Y, limited seating [4]  
+- Bourbon Coffee — Wi‑Fi Y, moderate seating [4]  
+- Solid State Books — Wi‑Fi Y, moderate seating [4]  
+- Yoube Cafe — Wi‑Fi Y, moderate seating [4]  
+- Kaldi’s Social House — Wi‑Fi Y, plenty of seating [4][5]  
+- Ebenezer’s Coffeehouse — Wi‑Fi Y, limited seating [5]  
+- Busboys and Poets — Wi‑Fi Y, plenty of seating [5]  
+- Capital One Café — Wi‑Fi Y, plenty of seating [5]
 
 Source attribution:
+Sources:
+- [1] Most beautiful places to study or read in DC — https://www.reddit.com/r/washingtondc/comments/8rh2bj/most_beautiful_places_to_studyread_in_dc/
+- [2, 3, 4, 5] Study and Remote Work Locations in DC — https://docs.google.com/spreadsheets/d/1SzIld1R8k2QeIKut5YacZTwVTanlP2O3ZxWdvn-XFv0/edit?gid=1240342982#gid=1240342982
 
 ---
 
 **Grounded response 2**
 
 Query:
+"What libraries are open on weekends after noon?"
 
 Response:
+Answer:
+The Howard University libraries that are open after noon on weekends are:
+
+- **Howard Business Library** – open Saturday 9 a.m.–6 p.m. and Sunday 1 p.m.–9 p.m. [2]  
+- **Undergraduate Library (UGL)** – open Saturday 9 a.m.–10 p.m. and Sunday 1:30 p.m.–10 p.m. [2]  
+- **Founders Library (and the Wayne A.I. Frederick Undergraduate Library)** – open Saturday 9 a.m.–6 p.m. and Sunday 1:30 p.m.–10 p.m. [4]
 
 Source attribution:
+Sources:
+- [1, 5] Best Places To Study On Campus — https://thehilltoponline.com/2023/08/21/best-places-to-study-on-campus/
+- [2] Howard Business Library — https://businesslibrary.howard.edu/
+- [3] Seven Places to Study on Howard's Campus — https://thedig.howard.edu/all-stories/seven-places-study-howards-campus
+- [4] Howard Founders Library — https://founders.howard.edu/
 
 ---
 
 **Out-of-scope query**
 
 Query:
+"When can I watch spongebob?"
 
 System response (refusal):
+Sorry, I don't have enough information on that.
 
 ---
 
@@ -278,7 +317,11 @@ System response (refusal):
 
 **Input fields:**
 
+My Streamlit interface in `streamlit_app.py` accepts a question and lets the user choose how many retrieved chunks to supply to `openai/gpt-oss-120b`, defaulting to top-k = 5. The `app.py` CLI can also be used to run the interface from a terminal.
+
 **Output format:**
+
+The output format is an `Answer` section with inline citations, and a `Sources` section that lists the titles of the supporting documents and their URLs. The Streamlit app runs on its default local port, `http://localhost:8501` (or `http://localhost:8502`).
 
 ---
 
@@ -287,9 +330,21 @@ System response (refusal):
 <!-- Show a complete query → response exchange as it actually appears in your interface.
      Must be text — not a screenshot. -->
 
-> **User:** 
+> **User:**
+"what places in dc are near to Howard where I can do an online meeting?"
 
-> **System:** 
+> **System:**
+You have several convenient options within a short walk of Howard University:
+Howard Plaza Towers West – The building’s first‑floor study nooks have plenty of seating and outlets, making them ideal for a video call or online meeting [2].
+Louis Stokes Health Science Library – Located at 501 W St NW (just a block or two from campus) and offers study space and parking nearby [3].
+Kaldi’s Social House – A nearby café with Wi‑Fi (though spotty at times), plenty of seating, and a quieter lounge area in the afternoons [1].
+Busboys and Poets – Offers Wi‑Fi, abundant seating, and power outlets under the tables, suitable for a meeting [1].
+Capital One Café – Provides Wi‑Fi and plenty of seating for a casual online session [1].
+Sources:
+[1, 4] Study and Remote Work Locations in DC — https://docs.google.com/spreadsheets/d/1SzIld1R8k2QeIKut5YacZTwVTanlP2O3ZxWdvn-XFv0/edit?gid=1240342982#gid=1240342982
+[2] Best Places To Study On Campus — https://thehilltoponline.com/2023/08/21/best-places-to-study-on-campus/
+[3] Louis Stokes Health Science Library About Page — https://hsl.howard.edu/library/about
+[5] Underrated study spots in DC — https://www.reddit.com/r/washingtondc/comments/1kggh4w/underrated_study_spots/
 
 ---
 
@@ -301,11 +356,16 @@ System response (refusal):
 
 | # | Question | Expected answer | System response (summarized) | Retrieval quality | Response accuracy |
 |---|----------|-----------------|------------------------------|-------------------|-------------------|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 |What libraries would still be open around Howard's campus on weekends past 12:00 pm? |The libraries that are open would include Founders (Saturdays and Sundays), Busineess Library (Saturdays and Sundays), Undergraduate Library (Saturdays and Sundays), and the Health Science Library (Saturdays and Sundays). |On Saturdays after 12 p.m., the Howard Business Library (9 a.m.–6 p.m.) [1], Founders Library (9 a.m.–6 p.m.) [2], and the Wayne A.I. Frederick Undergraduate Library (9 a.m.–10 p.m.) [2] are all open.
+On Sundays after 12 p.m., the Business Library (1 p.m.–9 p.m.) [1], Founders Library (1:30 p.m.–10 p.m.) [2], and the Undergraduate Library/UGL (1:30 p.m.–10 p.m.) [1] remain open. |Relevant |Accurate |
+| 2 |I have an online assignment due soon but I'm nowhere near the Howard Campus right now, where can I go in the city to work that has wifi I can use to submit this real quick? |Bourbon Coffee, Solid State Books, Yoube Cafe, Kaldi's Social House, Capitol One Cafe, Tynan Coffee and Tea, Compass Coffee, Grace Street Coffee, Panera Bread, Rue Cafe, Tryst, Jacob Coffee House, The Den - Politics and Prose, Boundary Stone, Kramerbooks & Afterwords Cafe, Library of Congress, and Three Fifty Bakery and Cofffee Bar. |You can work at a nearby public location that offers Wi‑Fi, such as the Georgetown University Library – it provides Wi‑Fi, plenty of seating and a quiet atmosphere, making it easy to finish and submit your assignment quickly【2】. Another good option is the Library of Congress, which also has Wi‑Fi, ample seating and a quiet setting【4】. Both are off‑campus and suitable for focused online work. |Relevant |Accurate |
+| 3 |What do other students say about some of the study spaces at Howard? |Students at Howard have good things to say about the study spaces like how Abraham Cleveland of the class of '23 remarks that the Locke Hall Writing Center "has lots of natural lighting with a huge table that allows me to spread out my work." |Other students highlight several Howard study spots for their atmosphere and amenities. One freshman praised the first‑floor study rooms for their “designs of each room and the consistent quiet environment” that help her focus [1]. A political‑science senior noted that the Writing Center in Locke Hall “has lots of natural lighting with a huge table that allows me to spread out my work” [1]. An African‑American‑studies student said Founders Library is her favorite because it is “historic and sentimental…very easy for me to study there” [1]. |Relevant |Accurate |
+| 4 |Any underrated or niche spots at Howard that I should know about whenever I want to go study in peace. |Sure, their are some underrated spots like Miner Hall or any building with a empty classroom since those have wifi, outlets, and A.C. |Howard’s campus actually has a few quieter, lesser‑known study areas you can use:
+Louis Stokes Library – a campus library with both whisper‑quiet and talk‑friendly spaces, ideal for solo work or small‑group collaboration【3】.
+Howard Plaza Towers, West – P‑42 – the largest study room in the building, offering plenty of space for private or group study sessions【3】.
+Howard Plaza Towers, West – first‑floor study nooks – smaller, more private rooms with convenient outlets, perfect for focused work in a low‑traffic spot【3】.
+These locations tend to be less crowded than the main library and provide a peaceful environment for studying. |Relevant |Accurate |
+| 5 |Any outside study or lounge areas on campus where I can meet people? |Yes, there is the Caribbean tree on The Yard of Howard. Since it is on The Yard, students walking by is a common site meaning you can easily run into new people or people you know. |Sorry, I don't have enough information on that. |Off-target |Inaccurate |
 
 **Retrieval quality:** Relevant / Partially relevant / Off-target  
 **Response accuracy:** Accurate / Partially accurate / Inaccurate
@@ -326,12 +386,16 @@ System response (refusal):
      results from an unrelated review" is an explanation. -->
 
 **Question that failed:**
+Any outside study or lounge areas on campus where I can meet people?
 
 **What the system returned:**
+Sorry, I don't have enough information on that.
 
 **Root cause (tied to a specific pipeline stage):**
+The issue stems from the retrieval stage. The Caribbean Tree information exists in my Seven Places to Study on Howard's Campus source, but the question has wording about outdoor lounges and meeting people that doesn't match the wording in the chunk closely enough. The system only passes the top five retrieved chunks to the model so the Caribbean Tree chunk wasn't even included in the top 5 chunks for generation context for this question. Also, the expected claim about students meeting or running into people is not directly from the document and more of an inference so the grounding instructions I put in made the model give the "Sorry" response instead of guessing.
 
 **What you would change to fix it:**
+I would improve the retrieval by adding more descriptive terms such as “social,” “outdoor,” “The Yard,” and “Caribbean Tree” to the source metadata or the query-processing step. This could also be done to many of the other sources so that the retrieval works better across the board and the "Sorry, no info" response can be avoided for actually relevant question.
 
 ---
 
@@ -341,8 +405,10 @@ System response (refusal):
      Answer both questions with at least 2–3 sentences each. -->
 
 **One way the spec helped you during implementation:**
+Most of the specifications from `planning.md` stayed the same in execution. The ingestion (chunking and overlap), the embedding and retrieval, and top k values all stayed largely the same. It helped to ensure that my system followed the grounding requirements in the generation phase too, and also having multiple test questions on hand was greatly valued since there were many testing portions in each milestone involving testing queries.
 
 **One way your implementation diverged from the spec, and why:**
+The main differences from my specs were the changes in my chunking sizes and overlap values. They were originally 1,100 and 175 respectively, but to get closer to 50 chunks, I had to change the values to 1000 and 200 respectively which put me at 49 chunks overall. I then had to implement some changes concerning my document that was a spreadsheet, which led to chunk count being able to surpass 50, at 53 overall and that was my final amount. I also did not use Gradio in generation and interface phase. I did end up using a different LLM than I originally planned which was openai/gpt-oss-120b instead of OpenAI GPT-4o or meta-llama/llama-4-scout-17b-16e-instruct. Lastly I made it so that the embedding model I used is forced to the CPU to avoid a meta-tensor loading error which before I fixed it would show up before the grounding "Sorry, no info" response had a chance to print.
 
 ---
 
@@ -359,12 +425,12 @@ System response (refusal):
 
 **Instance 1**
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+- *What I gave the AI:* I gave Copilot the planning.md architecture diagram for the interface and generation phase of the program.
+- *What it produced:* Copilot produced code but it was implementing OpenAI GPT-4o which I didn't want to use.
+- *What I changed or overrode:* I first overrode it to meta-llama/llama-4-scout-17b-16e-instruct which is what the project recommended for Groq. That was giving difficulties so I then changed it to openai/gpt-oss-120b which made the process work smoothly after that.
 
 **Instance 2**
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+- *What I gave the AI:* Early on, I asked Copilot why my reddit forum sources after being converted to raw text were coming in blank. 
+- *What it produced:* It produced a solution after diagnosing that reddit had blocks up on their servers so that scraping wouldn't go through. It suggested copying and pasting and that's what I did and it then said to clean out buttons, unecessary comments, ads, etc from the raw text to make it a pure Howard Study Spot document like the other sources.
+- *What I changed or overrode:* I mainly did as it suggested, however, I kept in some information that I thought would be relevant for the system like certain OP usernames for attribution, and date tags because I thought receny or time of posting could be a relevant metric for the system when it answers certain questions.

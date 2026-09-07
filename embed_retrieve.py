@@ -98,7 +98,7 @@ def create_index(
 ) -> int:
     """Embed chunks and store their documents and source metadata."""
     chunks = load_chunks(chunks_path)
-    model = SentenceTransformer(MODEL_NAME)
+    model = SentenceTransformer(MODEL_NAME, device="cpu")
     collection = get_collection(db_dir, reset=reset)
 
     texts = [chunk["text"] for chunk in chunks]
@@ -147,7 +147,7 @@ def retrieve(
     if count == 0:
         raise RuntimeError("The ChromaDB collection is empty")
 
-    model = SentenceTransformer(MODEL_NAME)
+    model = SentenceTransformer(MODEL_NAME, device="cpu")
     query_embedding = model.encode(
         [query],
         normalize_embeddings=True,
